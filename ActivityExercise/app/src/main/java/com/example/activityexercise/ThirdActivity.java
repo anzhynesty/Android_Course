@@ -1,15 +1,8 @@
 package com.example.activityexercise;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class ThirdActivity extends AppCompatActivity {
-
-    public static final int REQUEST_CODE = 333;
-
+public class ThirdActivity extends SetResultAndFinishActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,17 +11,14 @@ public class ThirdActivity extends AppCompatActivity {
     }
 
     public void btnGoToMain(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivityForResult(intent, REQUEST_CODE);
+        setResultAndFinishActivity(MainActivity.MAIN_ACTIVITY);
     }
 
     public void btnGoToSecond(View view) {
-        Intent intent = new Intent(this, SecondActivity.class);
-        startActivityForResult(intent, REQUEST_CODE);
+        setResultAndFinishActivity(MainActivity.SECOND_ACTIVITY);
     }
 
     public void btnGoToFourth(View view) {
-        Intent intent = new Intent(this, FourthActivity.class);
-        startActivityForResult(intent, REQUEST_CODE);
+        setResultAndFinishActivity(MainActivity.FOURTH_ACTIVITY);
     }
 }
