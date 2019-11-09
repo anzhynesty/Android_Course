@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void btnGoToSecond(View view) {
         Intent intent = new Intent(this, SecondActivity.class);
-        startActivityForResult(intent, REQUEST_CODE);
+        startActivity(intent);
     }
 
     public void btnGoToThird(View view) {
