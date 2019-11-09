@@ -6,14 +6,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class FourthActivity extends AppCompatActivity {
 
-    public static final int REQUEST_CODE = 123;
+    public static final int REQUEST_CODE = 444;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_fourth);
+    }
+
+    public void btnGoToMain(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivityForResult(intent, REQUEST_CODE);
     }
 
     public void btnGoToSecond(View view) {
@@ -23,11 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void btnGoToThird(View view) {
         Intent intent = new Intent(this, ThirdActivity.class);
-        startActivityForResult(intent, REQUEST_CODE);
-    }
-
-    public void btnGoToFourth(View view) {
-        Intent intent = new Intent(this, FourthActivity.class);
         startActivityForResult(intent, REQUEST_CODE);
     }
 }

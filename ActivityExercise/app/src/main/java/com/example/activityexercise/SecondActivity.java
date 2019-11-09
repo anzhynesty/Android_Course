@@ -6,18 +6,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class SecondActivity extends AppCompatActivity {
 
-    public static final int REQUEST_CODE = 123;
+    public static final int REQUEST_CODE = 222;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_second);
     }
 
-    public void btnGoToSecond(View view) {
-        Intent intent = new Intent(this, SecondActivity.class);
+    public void btnGoToMain(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
         startActivityForResult(intent, REQUEST_CODE);
     }
 
